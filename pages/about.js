@@ -1,12 +1,28 @@
+import Head from 'next/head'
 import Contact from '@/components/contact'
 import Container from '@/components/container'
 import Hero from '@/components/hero'
 import PostBody from '@/components/post-body'
 import { TwoColumn,  TwoColumnMain, TwoColumnSidebar} from '@/components/two-column'
+import Image from 'next/image'
+import eyecatch from 'gazo/next-react-website/images-local/about.jpg'
 
 const About=()=>
 <Container>
+	<Head>
+		<title>アバウト</title>
+	</Head>
 	<Hero title="About" subtitle="About development activities"/>
+	<figure>
+		<Image 
+		src={eyecatch} 
+		alt="" 
+		layout="responsive" 
+		sizes="(min-whidth: 1152px) 1152px, 100vw"
+		priority
+		placeholder="blur"
+		/>
+	</figure>
 	<TwoColumn>
 		<TwoColumnMain>
 			<PostBody>
