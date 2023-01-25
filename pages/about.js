@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Meta from '@/components/meta'
 import Contact from '@/components/contact'
 import Container from '@/components/container'
 import Hero from '@/components/hero'
@@ -9,12 +9,13 @@ import eyecatch from 'gazo/next-react-website/images-local/about.jpg'
 
 const About=()=>
 <Container>
-	<Head>
-		<title>アバウト</title>
-	</Head>
+	<Meta pageTitle="アバウト" pageDesc="About development activities" />
 	<Hero title="About" subtitle="About development activities"/>
+	pageImg={eyecatch.src}
+	pageImgW={eyecatch.width}
+	pageImgH={eyecatch.height}
 	<figure>
-		<Image 
+		<Image
 		src={eyecatch} 
 		alt="" 
 		layout="responsive" 
